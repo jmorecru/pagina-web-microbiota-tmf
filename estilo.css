@@ -1,0 +1,432 @@
+/* ==========================================================================
+   Microbiota, Clostridioides difficile y Trasplante de Microbiota Fecal (TMF)
+   Hospital General Universitario Gregorio Marañón · Proyecto PI20/01381
+
+   Hoja de estilos compartida por las siete páginas del sitio.
+   Al ser un sitio en HTML plano, la cabecera, el menú y el pie están
+   duplicados en cada página: si se modifica uno, hay que modificarlos todos.
+   ========================================================================== */
+
+:root {
+  --azul: #0b4f6c;
+  --verde: #145c5c;
+  --verde-claro: #e0efe9;
+  --fondo: #f5f5f0;
+  --texto: #12333f;
+  --texto-suave: #4a6470;
+  --borde: #d6e2e0;
+  --blanco: #ffffff;
+  --ancho: 1100px;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+p { margin: 0.5rem 0; }
+ul { margin: 0.5rem 0 0.5rem 1.2rem; }
+li { margin-bottom: 0.25rem; }
+
+/* Enlace de salto, visible solo al navegar con teclado */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--blanco);
+  color: var(--azul);
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  z-index: 100;
+}
+.skip-link:focus { left: 0.5rem; top: 0.5rem; }
+
+/* Foco visible y consistente para navegación por teclado */
+a:focus-visible, .skip-link:focus {
+  outline: 3px solid var(--verde);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Sprite de iconos: se define en cada página, nunca se muestra directamente */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* --- Cabecera ------------------------------------------------------------ */
+
+header {
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 1.1rem 2rem;
+}
+.header-inner { max-width: var(--ancho); margin: 0 auto; }
+.marca {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.marca:hover .marca-titulo { text-decoration: underline; }
+.marca-titulo {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.marca-entidad {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 0.15rem;
+}
+
+/* Banda institucional: logotipos y código de proyecto */
+.cabecera-pie {
+  background: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  padding: 0.9rem 2rem;
+}
+.cabecera-pie-inner {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+}
+.logos {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logos img { max-height: 46px; width: auto; height: auto; }
+.codigo-proyecto {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--azul);
+  white-space: nowrap;
+}
+
+/* --- Menú de navegación -------------------------------------------------- */
+
+nav {
+  background: var(--verde-claro);
+  padding: 0.5rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.nav-inner {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.4rem;
+}
+nav a {
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 600;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+nav a:hover { background: rgba(11,79,108,0.1); }
+nav a[aria-current="page"] {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+/* --- Contenido ----------------------------------------------------------- */
+
+main { padding: 2rem; max-width: var(--ancho); margin: 0 auto; }
+
+h1 {
+  margin: 0 0 1.2rem;
+  color: var(--azul);
+  font-size: 1.9rem;
+  line-height: 1.25;
+}
+.h-ico {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.16em;
+  color: var(--azul);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bloque {
+  background: var(--blanco);
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.04);
+  margin-bottom: 1.5rem;
+}
+.bloque h2 {
+  color: var(--verde);
+  font-size: 1.1rem;
+  margin: 1.4rem 0 0.3rem;
+}
+.bloque h2:first-child { margin-top: 0; }
+.entradilla { font-size: 1.05rem; color: var(--texto-suave); }
+
+/* --- Portada ------------------------------------------------------------- */
+
+.portada-intro {
+  background: var(--verde-claro);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.portada-intro h1 { margin-bottom: 0.6rem; }
+.portada-intro p { max-width: 62ch; }
+.acciones {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+}
+.boton {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.boton-principal { background: var(--azul); color: var(--blanco); }
+.boton-principal:hover { background: #093f57; }
+.boton-secundario {
+  background: var(--blanco);
+  color: var(--azul);
+  border: 2px solid var(--azul);
+}
+.boton-secundario:hover { background: #f0f7f5; }
+
+.tarjetas {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.tarjetas li { margin: 0; }
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  height: 100%;
+  padding: 1.2rem;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+.tarjeta:hover {
+  border-color: var(--azul);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+.tarjeta-titulo {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--azul);
+}
+.tarjeta-texto { font-size: 0.85rem; color: var(--texto-suave); line-height: 1.45; }
+.tarjeta .h-ico { width: 30px; height: 30px; vertical-align: baseline; }
+
+/* --- Galería de imágenes e infografías ----------------------------------- */
+
+.galeria {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+}
+.galeria figure { margin: 0; text-align: center; flex: 0 1 260px; max-width: 260px; }
+.galeria img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+}
+.galeria figcaption { font-size: 0.8rem; color: #555; margin-top: 0.3rem; }
+.galeria figure.infografia-fig { flex: 1 1 440px; max-width: 520px; }
+
+/* --- Infografías nativas -------------------------------------------------
+   Construidas en HTML y SVG en lugar de imágenes: el texto es real, así que
+   es seleccionable, accesible, escalable y se corrige editando una línea.
+   ------------------------------------------------------------------------ */
+
+.ig {
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fbfcfb;
+  text-align: left;
+}
+.ig-titulo {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  background: var(--azul);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.35;
+}
+.ig-banda {
+  margin: 0;
+  padding: 0.4rem 1rem;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+}
+.ig-banda.v2 { background: #5a6b1f; }
+.ig-banda.v3 { background: #8a4b1f; }
+.ig-banda.v4 { background: #6a3a6e; }
+
+.ig-items {
+  list-style: none;
+  margin: 0;
+  padding: 0.85rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.ig-items.n2 { grid-template-columns: repeat(2, 1fr); }
+.ig-items.n3 { grid-template-columns: repeat(3, 1fr); }
+.ig-items.n4 { grid-template-columns: repeat(2, 1fr); }
+.ig-items li {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+
+.ig-flujo {
+  padding: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+.ig-paso {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
+.ig-flecha {
+  flex: none;
+  align-self: center;
+  color: var(--verde);
+  font-size: 1.1rem;
+  line-height: 1;
+  padding-top: 0.6rem;
+}
+
+.ig-ico {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  color: var(--azul);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ig-cierre {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: var(--verde-claro);
+  color: var(--azul);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* --- Contacto ------------------------------------------------------------ */
+
+.contacto {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: var(--verde-claro);
+  border-radius: 6px;
+  font-weight: 600;
+}
+.contacto a { color: var(--azul); }
+
+/* --- Pie ----------------------------------------------------------------- */
+
+footer {
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 1.5rem 2rem;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+footer a { color: var(--verde-claro); }
+.footer-inner { max-width: var(--ancho); margin: 0 auto; }
+.aviso {
+  background: rgba(255,255,255,0.1);
+  border-left: 4px solid var(--verde-claro);
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+}
+.aviso strong { display: block; margin-bottom: 0.2rem; }
+.actualizado { margin-top: 0.8rem; opacity: 0.85; }
+
+/* --- Adaptación a pantallas pequeñas ------------------------------------- */
+
+@media (max-width: 700px) {
+  .ig-items.n3, .ig-items.n4 { grid-template-columns: repeat(2, 1fr); }
+  .ig-flujo { flex-direction: column; align-items: stretch; }
+  .ig-flecha { align-self: center; padding: 0; transform: rotate(90deg); }
+}
+
+@media (max-width: 600px) {
+  header, main, nav, footer, .cabecera-pie { padding-left: 1rem; padding-right: 1rem; }
+  .bloque, .portada-intro { padding: 1.2rem; }
+  h1 { font-size: 1.5rem; }
+  .logos { gap: 1rem; }
+  .logos img { max-height: 38px; }
+  .acciones .boton { flex: 1 1 100%; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

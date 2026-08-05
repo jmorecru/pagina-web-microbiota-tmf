@@ -4,336 +4,51 @@
 <meta charset="UTF-8">
 <title>Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF) - HGUGM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Información institucional sobre microbiota, infección por Clostridioides difficile, Trasplante de Microbiota Fecal (TMF), donación de heces y actividad del Hospital General Universitario Gregorio Marañón.">
+<meta name="description" content="Información institucional del Hospital General Universitario Gregorio Marañón sobre microbiota intestinal, infección por Clostridioides difficile, Trasplante de Microbiota Fecal (TMF) y donación de heces.">
 
-<!-- Provisional: impide la indexación en buscadores mientras el contenido no esté aprobado.
-     Eliminar esta línea para publicar de forma definitiva. -->
+<!-- Provisional: impide la indexación en buscadores mientras el contenido no esté
+     aprobado. Para publicar de forma definitiva, eliminar esta línea en las 7 páginas. -->
 <meta name="robots" content="noindex, nofollow">
 
 <link rel="canonical" href="https://jmorecru.github.io/pagina-web-microbiota-tmf/">
 <meta name="theme-color" content="#0b4f6c">
 
-<!-- Open Graph: vista previa al compartir el enlace (WhatsApp, redes sociales) -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
 <meta property="og:site_name" content="Hospital General Universitario Gregorio Marañón">
 <meta property="og:title" content="Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF)">
-<meta property="og:description" content="Información sobre microbiota intestinal, infección por Clostridioides difficile, Trasplante de Microbiota Fecal, donación de heces y actividad del Hospital General Universitario Gregorio Marañón.">
+<meta property="og:description" content="Programa clínico del Hospital General Universitario Gregorio Marañón para el manejo de la infección por Clostridioides difficile y el Trasplante de Microbiota Fecal.">
 <meta property="og:url" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/">
 <meta property="og:image" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/images/microbiota-foto.jpeg">
 <meta property="og:image:width" content="442">
 <meta property="og:image:height" content="248">
 <meta property="og:image:alt" content="Vista microscópica de la microbiota intestinal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF)">
-<meta name="twitter:description" content="Información institucional del Hospital General Universitario Gregorio Marañón sobre microbiota, C. difficile y TMF.">
 <meta name="twitter:image" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/images/microbiota-foto.jpeg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b4f6c'/%3E%3Cpath d='M11 6c0 6 10 8 10 14a5 5 0 0 1-10 0c0-6 10-8 10-14' fill='none' stroke='%23e0efe9' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
-
-<style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #12333f;
-    background-color: #f5f5f0;
-  }
-
-  /* Enlace de salto, visible solo al navegar con teclado */
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 0;
-    background: #ffffff;
-    color: #0b4f6c;
-    padding: 0.6rem 1rem;
-    font-weight: 700;
-    z-index: 100;
-  }
-  .skip-link:focus { left: 0.5rem; top: 0.5rem; }
-
-  /* Foco visible y consistente para navegación por teclado */
-  a:focus-visible, .skip-link:focus {
-    outline: 3px solid #145c5c;
-    outline-offset: 2px;
-    border-radius: 2px;
-  }
-
-  header {
-    background: #0b4f6c;
-    color: #ffffff;
-    padding: 1.5rem 2rem;
-  }
-  header h1 { margin: 0; font-size: 1.8rem; }
-  header p { margin: 0.3rem 0 0; font-size: 0.95rem; }
-
-  /* Banda institucional bajo la cabecera: logos y código de proyecto */
-  .cabecera-pie {
-    background: #ffffff;
-    border-bottom: 1px solid #d6e2e0;
-    padding: 0.9rem 2rem;
-  }
-  .cabecera-pie-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem 2rem;
-    flex-wrap: wrap;
-  }
-  .logos {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .logos img { max-height: 46px; width: auto; height: auto; }
-  .codigo-proyecto {
-    margin: 0;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #0b4f6c;
-    white-space: nowrap;
-  }
-
-  nav {
-    background: #e0efe9;
-    padding: 0.6rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  }
-  nav a {
-    margin-right: 1rem;
-    text-decoration: none;
-    color: #0b4f6c;
-    font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
-  nav a:hover { text-decoration: underline; }
-
-  main { padding: 2rem; max-width: 1100px; margin: 0 auto; }
-  section {
-    margin-bottom: 2.5rem;
-    background: #ffffff;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.04);
-    scroll-margin-top: 70px;
-  }
-  section h2 { margin-top: 0; color: #0b4f6c; font-size: 1.4rem; }
-  section h3 { color: #145c5c; font-size: 1.1rem; margin-top: 1.2rem; }
-  p { margin: 0.4rem 0; }
-  ul { margin: 0.4rem 0 0.4rem 1.2rem; }
-  li { margin-bottom: 0.2rem; }
-
-  /* Emoji decorativo: no aporta información, se oculta a lectores de pantalla */
-  .ico { font-style: normal; }
-
-  .galeria {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 1.2rem 0;
-  }
-  .galeria figure { margin: 0; text-align: center; flex: 0 1 260px; max-width: 260px; }
-  .galeria img { max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 0 6px rgba(0,0,0,0.08); }
-  .galeria figcaption { font-size: 0.8rem; color: #555; margin-top: 0.3rem; }
-
-  /* --- Infografías nativas -------------------------------------------------
-     Reconstruidas en HTML y SVG en lugar de imágenes: texto real, sin faltas
-     incrustadas, accesible, escalable y de unos pocos KB.
-     --------------------------------------------------------------------- */
-  .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
-
-  .galeria figure.infografia-fig { flex: 1 1 440px; max-width: 520px; }
-
-  .ig {
-    border: 1px solid #d6e2e0;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fbfcfb;
-    text-align: left;
-  }
-  .ig-titulo {
-    margin: 0;
-    padding: 0.85rem 1rem;
-    background: #0b4f6c;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.35;
-  }
-  .ig-banda {
-    margin: 0;
-    padding: 0.4rem 1rem;
-    background: #145c5c;
-    color: #ffffff;
-    font-size: 0.82rem;
-    font-weight: 700;
-    text-align: center;
-  }
-  .ig-banda.v2 { background: #5a6b1f; }
-  .ig-banda.v3 { background: #8a4b1f; }
-  .ig-banda.v4 { background: #6a3a6e; }
-
-  .ig-items {
-    list-style: none;
-    margin: 0;
-    padding: 0.85rem;
-    display: grid;
-    gap: 0.7rem;
-  }
-  .ig-items.n2 { grid-template-columns: repeat(2, 1fr); }
-  .ig-items.n3 { grid-template-columns: repeat(3, 1fr); }
-  .ig-items.n4 { grid-template-columns: repeat(2, 1fr); }
-  .ig-items li {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.35rem;
-    font-size: 0.74rem;
-    line-height: 1.35;
-  }
-
-  .ig-flujo {
-    padding: 0.85rem;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.35rem;
-  }
-  .ig-paso {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 0.35rem;
-    font-size: 0.74rem;
-    line-height: 1.35;
-  }
-  .ig-flecha {
-    flex: none;
-    align-self: center;
-    color: #145c5c;
-    font-size: 1.1rem;
-    line-height: 1;
-    padding-top: 0.6rem;
-  }
-
-  .ig-ico {
-    width: 30px;
-    height: 30px;
-    flex: none;
-    color: #0b4f6c;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.7;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .ig-cierre {
-    margin: 0;
-    padding: 0.6rem 1rem;
-    background: #e0efe9;
-    color: #0b4f6c;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-align: center;
-  }
-
-  footer {
-    background: #0b4f6c;
-    color: #ffffff;
-    padding: 1.5rem 2rem;
-    font-size: 0.85rem;
-    margin-top: 2rem;
-  }
-  footer a { color: #e0efe9; }
-  .footer-inner { max-width: 1100px; margin: 0 auto; }
-  .aviso {
-    background: rgba(255,255,255,0.1);
-    border-left: 4px solid #e0efe9;
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 1.2rem;
-  }
-  .aviso strong { display: block; margin-bottom: 0.2rem; }
-  .actualizado { margin-top: 0.8rem; opacity: 0.85; }
-
-  @media (max-width: 700px) {
-    .ig-items.n3, .ig-items.n4 { grid-template-columns: repeat(2, 1fr); }
-    .ig-flujo { flex-direction: column; align-items: stretch; }
-    .ig-flecha { align-self: center; padding: 0; transform: rotate(90deg); }
-  }
-
-  @media (max-width: 600px) {
-    header, main, nav, footer, .cabecera-pie { padding-left: 1rem; padding-right: 1rem; }
-    section { padding: 1.2rem; }
-    .cabecera-pie-inner { justify-content: flex-start; }
-    .logos { gap: 1rem; }
-    .logos img { max-height: 38px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-</style>
+<link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
 <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-<!-- Iconos reutilizables para las infografías -->
 <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-  <symbol id="i-microbio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><circle cx="10" cy="10" r="1.2"/><circle cx="14.4" cy="13" r="1"/><circle cx="10.4" cy="14.4" r="0.9"/><path d="M12 5.5V3M18.5 12H21M12 18.5V21M5.5 12H3"/></symbol>
   <symbol id="i-adn" viewBox="0 0 24 24"><path d="M8.5 3c0 4 7 5 7 9s-7 5-7 9"/><path d="M15.5 3c0 4-7 5-7 9s7 5 7 9"/><path d="M9.5 7.5h5M8.2 12h7.6M9.5 16.5h5"/></symbol>
-  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7 2.5v6c0 4.5-3 7.5-7 9.5-4-2-7-5-7-9.5v-6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
-  <symbol id="i-intestino" viewBox="0 0 24 24"><path d="M8 3v3.5A3.5 3.5 0 0 0 11.5 10H14a3.5 3.5 0 0 1 0 7h-2.5A3.5 3.5 0 0 0 8 20.5V21"/><path d="M16.5 3v3.5"/></symbol>
-  <symbol id="i-bebe" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.2"/><path d="M6.5 21c0-3.6 2.5-6.5 5.5-6.5s5.5 2.9 5.5 6.5"/></symbol>
-  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/></symbol>
-  <symbol id="i-diversidad" viewBox="0 0 24 24"><circle cx="8" cy="9" r="2.4"/><circle cx="15.6" cy="7.6" r="1.8"/><circle cx="16.4" cy="14.6" r="2.6"/><circle cx="8.4" cy="16" r="2"/><circle cx="12" cy="11.8" r="1.2"/></symbol>
-  <symbol id="i-balanza" viewBox="0 0 24 24"><path d="M12 4.5V20M8 20h8M4.5 8.5h15"/><path d="M2.5 13a3 3 0 0 0 4 0L4.5 8.5 2.5 13z"/><path d="M17.5 13a3 3 0 0 0 4 0L19.5 8.5 17.5 13z"/></symbol>
-  <symbol id="i-gota" viewBox="0 0 24 24"><path d="M12 3.5s5.5 6.2 5.5 9.8a5.5 5.5 0 0 1-11 0C6.5 9.7 12 3.5 12 3.5z"/></symbol>
-  <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 4L2.8 20h18.4L12 4z"/><path d="M12 10v4.5M12 17.3h.01"/></symbol>
-  <symbol id="i-superficie" viewBox="0 0 24 24"><path d="M3 17h18M4.5 17v3.5M19.5 17v3.5"/><circle cx="8" cy="11" r="1.6"/><circle cx="13" cy="8.4" r="1.6"/><circle cx="17" cy="12" r="1.6"/></symbol>
+  <symbol id="i-microbio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6.5"/><circle cx="10" cy="10" r="1.2"/><circle cx="14.4" cy="13" r="1"/><circle cx="10.4" cy="14.4" r="0.9"/><path d="M12 5.5V3M18.5 12H21M12 18.5V21M5.5 12H3"/></symbol>
   <symbol id="i-capsula" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="6" rx="3"/><path d="M12 9v6"/></symbol>
-  <symbol id="i-tubo" viewBox="0 0 24 24"><path d="M5 20.5V9a4 4 0 0 1 8 0v6a2.5 2.5 0 0 0 5 0V6"/><circle cx="18" cy="4" r="1.8"/></symbol>
-  <symbol id="i-matraz" viewBox="0 0 24 24"><path d="M9 3h6M10 3v5.5L4.9 18A2 2 0 0 0 6.7 21h10.6a2 2 0 0 0 1.8-3L14 8.5V3"/><path d="M7.4 15h9.2"/></symbol>
-  <symbol id="i-microscopio" viewBox="0 0 24 24"><path d="M8.5 18.5h10M5.5 21.5h13"/><path d="M11 18.5l-2-3.6"/><path d="M13.4 3.5l3.6 6.2-3.1 1.8-3.6-6.2z"/><path d="M9.6 8.6l3.1 1.8"/><path d="M14.2 13.6a4.6 4.6 0 0 1-4.6 4.6"/></symbol>
-  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M14.9 14.9l5.6 5.6"/></symbol>
-  <symbol id="i-documento" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
-  <symbol id="i-caja" viewBox="0 0 24 24"><path d="M3 8l9-4 9 4v8l-9 4-9-4V8z"/><path d="M3 8l9 4 9-4M12 12v8"/></symbol>
-  <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M12 20.5S4.5 15.8 4.5 10.6A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7.5 2.6c0 5.2-7.5 9.9-7.5 9.9z"/></symbol>
   <symbol id="i-hospital" viewBox="0 0 24 24"><path d="M4 21V7l8-4 8 4v14"/><path d="M12 8.5v5M9.5 11h5"/><path d="M3 21h18"/></symbol>
-  <symbol id="i-birrete" viewBox="0 0 24 24"><path d="M2.5 8.5L12 4.5l9.5 4L12 12.5 2.5 8.5z"/><path d="M6.5 10.2V15c0 1.7 2.5 3 5.5 3s5.5-1.3 5.5-3v-4.8"/></symbol>
+  <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M12 20.5S4.5 15.8 4.5 10.6A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7.5 2.6c0 5.2-7.5 9.9-7.5 9.9z"/></symbol>
   <symbol id="i-equipo" viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="2.6"/><circle cx="5.4" cy="10" r="2.1"/><circle cx="18.6" cy="10" r="2.1"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5"/><path d="M2 18.5c0-2 1.5-3.6 3.4-3.6M22 18.5c0-2-1.5-3.6-3.4-3.6"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s6.5-6.6 6.5-11.2A6.5 6.5 0 0 0 5.5 10.3c0 4.6 6.5 11.2 6.5 11.2z"/><circle cx="12" cy="10.2" r="2.4"/></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></symbol>
-  <symbol id="i-calendario" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="15" rx="2"/><path d="M3.5 10.5h17M8 3.5v4M16 3.5v4"/></symbol>
-  <symbol id="i-mano" viewBox="0 0 24 24"><path d="M8 13.5V5.6a1.8 1.8 0 0 1 3.6 0V11"/><path d="M11.6 11V4.6a1.8 1.8 0 0 1 3.6 0V11"/><path d="M15.2 11V6.8a1.8 1.8 0 0 1 3.6 0V14c0 4-3 7-7 7s-7-3-7-7v-2.4a1.8 1.8 0 0 1 3.6 0v1.9"/></symbol>
-  <symbol id="i-jeringa" viewBox="0 0 24 24"><path d="M14.5 3.5l6 6"/><path d="M17.6 6.6L7 17.2l-3.4 3.3"/><path d="M6.2 14l3.8 3.8M11.6 8.6l3.8 3.8"/></symbol>
-  <symbol id="i-tuboensayo" viewBox="0 0 24 24"><path d="M8.5 3h7"/><path d="M10 3v15a2.5 2.5 0 0 0 5 0V3"/><path d="M10 12h5"/></symbol>
 </svg>
 
 <header>
-  <h1>Microbiota, Clostridioides difficile y Trasplante de Microbiota Fecal (TMF)</h1>
-  <p>Hospital General Universitario Gregorio Marañón · Servicio público, actividad clínica e investigación en microbiota y TMF.</p>
+  <div class="header-inner">
+    <a class="marca" href="index.html">
+      <span class="marca-titulo">Microbiota, <em>Clostridioides difficile</em> y Trasplante de Microbiota Fecal</span>
+      <span class="marca-entidad">Hospital General Universitario Gregorio Marañón</span>
+    </a>
+  </div>
 </header>
 
 <div class="cabecera-pie">
@@ -348,363 +63,78 @@
   </div>
 </div>
 
-<nav aria-label="Secciones de la página">
-  <a href="#microbiota">Microbiota y salud intestinal</a>
-  <a href="#cdiff">Clostridioides difficile</a>
-  <a href="#tmf">Trasplante de Microbiota Fecal (TMF)</a>
-  <a href="#hgugm">Actividad HGUGM</a>
-  <a href="#donacion">Donación de heces</a>
-  <a href="#profesionales">Información para profesionales</a>
+<nav aria-label="Secciones del sitio">
+  <div class="nav-inner">
+    <a href="index.html" aria-current="page">Inicio</a>
+    <a href="microbiota.html">Microbiota</a>
+    <a href="clostridioides-difficile.html">C. difficile</a>
+    <a href="trasplante-microbiota-fecal.html">TMF</a>
+    <a href="actividad-hospital.html">Actividad HGUGM</a>
+    <a href="donacion-de-heces.html">Donación de heces</a>
+    <a href="profesionales.html">Profesionales</a>
+  </div>
 </nav>
 
 <main id="contenido">
 
-  <!-- Microbiota -->
-  <section id="microbiota">
-    <h2><span class="ico" aria-hidden="true">🧬</span> Microbiota, Microbioma y Salud Intestinal</h2>
-    <p>La microbiota es el conjunto de microorganismos —bacterias, hongos, virus y otros— que viven en nuestro cuerpo, especialmente en el intestino. El microbioma incluye estos microorganismos, su material genético y las sustancias que producen.</p>
-    <p>El ser humano alberga una enorme cantidad de microorganismos que cumplen funciones esenciales: ayudan a digerir alimentos, producen vitaminas, regulan el metabolismo, protegen frente a infecciones y colaboran en el desarrollo del sistema inmunitario.</p>
+  <div class="portada-intro">
+    <h1>Microbiota, <em>Clostridioides difficile</em> y Trasplante de Microbiota Fecal (TMF)</h1>
+    <p>Nuestro hospital desarrolla un programa clínico dedicado al manejo de la infección por
+      <em>C. difficile</em> y a la aplicación del TMF. Se trata de un servicio <strong>altruista</strong>,
+      integrado en el sistema sanitario público y orientado exclusivamente al beneficio de los pacientes.</p>
+    <div class="acciones">
+      <a class="boton boton-principal" href="donacion-de-heces.html">Quiero ser donante</a>
+      <a class="boton boton-secundario" href="profesionales.html">Soy profesional sanitario</a>
+    </div>
+  </div>
 
-    <h3>Formación y evolución de la microbiota</h3>
-    <p>La colonización comienza muy temprano en la vida y se va modificando según factores como el tipo de parto, la lactancia, la dieta, el uso de antibióticos y el estilo de vida. Durante la infancia la microbiota es menos estable y más variable entre individuos. En la edad adulta adquiere mayor estabilidad, y en personas mayores puede sufrir cambios asociados al envejecimiento.</p>
-
-    <h3>¿Qué es una microbiota equilibrada?</h3>
-    <p>No existe una microbiota "única" o universal, pero sí características asociadas a buena salud intestinal:</p>
-    <ul>
-      <li>Alta diversidad de microorganismos.</li>
-      <li>Equilibrio entre los principales grupos bacterianos.</li>
-      <li>Producción de metabolitos beneficiosos, como los ácidos grasos de cadena corta.</li>
+  <div class="bloque">
+    <h2>Contenido de esta web</h2>
+    <ul class="tarjetas">
+      <li>
+        <a class="tarjeta" href="microbiota.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-adn"/></svg>
+          <span class="tarjeta-titulo">Microbiota y salud intestinal</span>
+          <span class="tarjeta-texto">Qué es la microbiota, cómo se forma a lo largo de la vida y qué caracteriza a una microbiota equilibrada.</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="clostridioides-difficile.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-microbio"/></svg>
+          <span class="tarjeta-titulo">Infección por <em>C. difficile</em></span>
+          <span class="tarjeta-texto">Cómo se transmite, qué cuadros produce y por qué recurre con frecuencia tras el tratamiento.</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="trasplante-microbiota-fecal.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-capsula"/></svg>
+          <span class="tarjeta-titulo">Trasplante de Microbiota Fecal</span>
+          <span class="tarjeta-texto">En qué consiste el TMF, qué evidencia lo respalda, cómo se realiza y qué preparación requiere.</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="actividad-hospital.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-hospital"/></svg>
+          <span class="tarjeta-titulo">Actividad del hospital</span>
+          <span class="tarjeta-texto">El programa del Gregorio Marañón: banco de heces, TMF en cápsulas, investigación y formación.</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="donacion-de-heces.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-corazon"/></svg>
+          <span class="tarjeta-titulo">Donación de heces</span>
+          <span class="tarjeta-texto">Requisitos para donar, cómo se evalúa al donante y de qué forma se puede colaborar.</span>
+        </a>
+      </li>
+      <li>
+        <a class="tarjeta" href="profesionales.html">
+          <svg class="h-ico" aria-hidden="true"><use href="#i-equipo"/></svg>
+          <span class="tarjeta-titulo">Información para profesionales</span>
+          <span class="tarjeta-texto">Asesoramiento clínico, revisión de casos complejos y colaboración en investigación y formación.</span>
+        </a>
+      </li>
     </ul>
-    <p>Cuando este equilibrio se altera hablamos de <strong>disbiosis</strong>, que puede relacionarse con diversas enfermedades, entre ellas la infección por <em>Clostridioides difficile</em>.</p>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Microbiota y microbioma</p>
-
-          <p class="ig-banda">¿Qué es la microbiota?</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microbio"/></svg>Bacterias, virus y hongos</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-intestino"/></svg>Digestión y metabolismo</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-escudo"/></svg>Inmunidad y protección</li>
-          </ul>
-
-          <p class="ig-banda v2">¿Qué es el microbioma?</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-adn"/></svg>Microbiota y su material genético</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-gota"/></svg>Sustancias que produce</li>
-          </ul>
-
-          <p class="ig-banda v3">Formación y evolución</p>
-          <div class="ig-flujo">
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-bebe"/></svg>Nacimiento y primera infancia</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-check"/></svg>Estabilidad en la edad adulta</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-reloj"/></svg>Cambios con el envejecimiento</div>
-          </div>
-
-          <p class="ig-banda v4">Microbiota equilibrada</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-diversidad"/></svg>Diversidad microbiana</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-balanza"/></svg>Equilibrio entre grupos bacterianos</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-gota"/></svg>Ácidos grasos de cadena corta</li>
-          </ul>
-
-          <p class="ig-cierre">Disbiosis: alteración de este equilibrio</p>
-        </div>
-        <figcaption>Microbiota, microbioma y salud intestinal.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/microbiota-foto.jpeg" alt="Vista microscópica de la microbiota intestinal" width="442" height="248" fetchpriority="high" decoding="async">
-        <figcaption>Vista microscópica de la microbiota intestinal.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- C. difficile -->
-  <section id="cdiff">
-    <h2><span class="ico" aria-hidden="true">🦠</span> Infección por <em>Clostridioides difficile</em></h2>
-    <p><em>C. difficile</em> es una bacteria capaz de producir toxinas que dañan el intestino y causar cuadros que van desde diarrea leve hasta colitis grave. Es una causa frecuente de diarrea asociada a antibióticos y puede afectar tanto a personas hospitalizadas como a personas en la comunidad.</p>
-
-    <h3>Transmisión</h3>
-    <p>Se transmite por vía fecal-oral, a través del contacto con personas infectadas o superficies contaminadas. Sus esporas son muy resistentes y pueden persistir en el entorno.</p>
-
-    <h3>Mecanismo de enfermedad</h3>
-    <p>Cuando la microbiota intestinal se altera —por ejemplo, tras el uso de antibióticos— la bacteria puede proliferar y liberar toxinas que inflaman y lesionan la mucosa intestinal. En casos graves puede producir pseudomembranas, megacolon tóxico o enfermedad fulminante.</p>
-
-    <h3>Infección recurrente</h3>
-    <p>Entre un 15% y un 40% de los pacientes pueden sufrir recurrencias. Estas recaídas aumentan el malestar, la estancia hospitalaria y el riesgo de nuevas complicaciones.</p>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Infección por <em>Clostridioides difficile</em></p>
-
-          <p class="ig-banda">Transmisión</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-mano"/></svg>Vía fecal-oral</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-superficie"/></svg>Superficies contaminadas por esporas</li>
-          </ul>
-
-          <p class="ig-banda v3">Síntomas y complicaciones</p>
-          <div class="ig-flujo">
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-gota"/></svg>Diarrea</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-intestino"/></svg>Colitis pseudomembranosa</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-alerta"/></svg>Megacolon tóxico</div>
-          </div>
-
-          <p class="ig-banda v4">Infección recurrente</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-calendario"/></svg>Recaídas en el 15-40 % de los pacientes</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-alerta"/></svg>Mayor dificultad de tratamiento</li>
-          </ul>
-
-          <p class="ig-cierre">Más complicaciones y más días de hospitalización</p>
-        </div>
-        <figcaption>Infección por <em>Clostridioides difficile</em>.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/cdifficile-foto.png" alt="Cultivo de Clostridioides difficile en placa de laboratorio" width="312" height="234" loading="lazy" decoding="async">
-        <figcaption>Cultivo de <em>C. difficile</em> en placa de laboratorio.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- TMF -->
-  <section id="tmf">
-    <h2><span class="ico" aria-hidden="true">💊</span> Trasplante de Microbiota Fecal (TMF)</h2>
-    <p>El TMF consiste en transferir microbiota intestinal procedente de un donante sano al intestino de un paciente, con el objetivo de restaurar el equilibrio perdido. Es el tratamiento más eficaz para la infección recurrente por <em>C. difficile</em>, con tasas de resolución muy elevadas.</p>
-
-    <h3>Evidencia y seguridad</h3>
-    <p>Numerosos estudios han demostrado que el TMF es seguro y altamente eficaz en pacientes con recurrencias múltiples. También se investiga su posible utilidad en otras enfermedades, aunque actualmente solo está reconocido para la infección recurrente por <em>C. difficile</em>.</p>
-
-    <h3>¿Cómo se realiza?</h3>
-    <ul>
-      <li>Selección estricta de donantes mediante cuestionarios y pruebas analíticas.</li>
-      <li>Procesamiento de la muestra para concentrar la microbiota y eliminar impurezas.</li>
-      <li>Administración por colonoscopia, cápsulas, enemas o sondas gastrointestinales.</li>
-    </ul>
-    <p>El Hospital General Universitario Gregorio Marañón dispone de <strong>banco de heces</strong> y <strong>TMF en cápsulas</strong>, lo que facilita el acceso y la seguridad del procedimiento.</p>
-
-    <h3>Preparación y recuperación</h3>
-    <p>El paciente suspende antibióticos 24–48 horas antes. La recuperación suele ser rápida, con molestias leves y transitorias según la vía de administración.</p>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Trasplante de Microbiota Fecal (TMF)</p>
-
-          <p class="ig-banda">¿En qué consiste?</p>
-          <div class="ig-flujo">
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-tuboensayo"/></svg>Muestra de un donante sano</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-microbio"/></svg>Transferencia de la microbiota</div>
-            <span class="ig-flecha" aria-hidden="true">→</span>
-            <div class="ig-paso"><svg class="ig-ico" aria-hidden="true"><use href="#i-check"/></svg>Equilibrio intestinal restaurado</div>
-          </div>
-
-          <p class="ig-banda v2">Vías de administración</p>
-          <ul class="ig-items n4">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-tubo"/></svg>Colonoscopia</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-capsula"/></svg>Cápsulas orales</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-gota"/></svg>Enema</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-jeringa"/></svg>Sonda gastrointestinal</li>
-          </ul>
-
-          <p class="ig-banda v3">Proceso y preparación</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-lupa"/></svg>Selección y análisis del donante</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-matraz"/></svg>Procesamiento de la muestra</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-reloj"/></svg>Control y seguimiento</li>
-          </ul>
-
-          <p class="ig-banda v4">Qué aporta</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-escudo"/></svg>Resuelve la infección recurrente</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-corazon"/></svg>Recuperación rápida</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microscopio"/></svg>En investigación para otras enfermedades</li>
-          </ul>
-
-          <p class="ig-cierre">Único uso reconocido: infección recurrente por <em>C. difficile</em></p>
-        </div>
-        <figcaption>Trasplante de Microbiota Fecal (TMF).</figcaption>
-      </figure>
-      <figure>
-        <img src="images/tmf-foto.png" alt="Cápsulas utilizadas para el Trasplante de Microbiota Fecal" width="355" height="305" loading="lazy" decoding="async">
-        <figcaption>Cápsulas de TMF.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Actividad HGUGM -->
-  <section id="hgugm">
-    <h2><span class="ico" aria-hidden="true">🏥</span> Actividad del Hospital General Universitario Gregorio Marañón</h2>
-    <p>Nuestro hospital desarrolla un programa clínico dedicado al manejo de la infección por <em>C. difficile</em> y a la aplicación del TMF. Se trata de un servicio <strong>altruista</strong>, integrado en el sistema sanitario público y orientado exclusivamente al beneficio de los pacientes.</p>
-
-    <h3>Nuestro trabajo incluye</h3>
-    <ul>
-      <li>Atención especializada a pacientes con infección recurrente por <em>C. difficile</em>.</li>
-      <li>Banco de heces y TMF en cápsulas.</li>
-      <li>Procesamiento seguro y estandarizado de muestras.</li>
-      <li>Coordinación entre Enfermedades Infecciosas, Microbiología, Gastroenterología y Hematología.</li>
-      <li>Investigación y formación en microbiota y TMF.</li>
-    </ul>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Hospital General Universitario Gregorio Marañón</p>
-
-          <p class="ig-banda">Centro de referencia</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-hospital"/></svg>Atención especializada y multidisciplinar</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-capsula"/></svg>Banco de heces y TMF en cápsulas</li>
-          </ul>
-
-          <p class="ig-banda v2">Servicios que coordinan el programa</p>
-          <ul class="ig-items n4">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microbio"/></svg>Enfermedades Infecciosas</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microscopio"/></svg>Microbiología</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-intestino"/></svg>Gastroenterología</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-gota"/></svg>Hematología</li>
-          </ul>
-
-          <p class="ig-banda v3">Docencia e investigación</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-birrete"/></svg>Formación en microbiota y TMF</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-lupa"/></svg>Proyectos científicos</li>
-          </ul>
-
-          <p class="ig-banda v4">Dónde estamos</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-pin"/></svg>Madrid · Metro O'Donnell</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-equipo"/></svg>Equipo multidisciplinar</li>
-          </ul>
-
-          <p class="ig-cierre">Servicio altruista, integrado en el sistema sanitario público</p>
-        </div>
-        <figcaption>Actividad del Hospital General Universitario Gregorio Marañón.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/hgugm-foto.png" alt="Vista aérea del Hospital General Universitario Gregorio Marañón" width="405" height="234" loading="lazy" decoding="async">
-        <figcaption>Hospital General Universitario Gregorio Marañón.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Donación de heces -->
-  <section id="donacion">
-    <h2><span class="ico" aria-hidden="true">💚</span> Donación de heces</h2>
-    <p>El TMF depende de personas sanas que desean colaborar de forma altruista. La selección del donante es rigurosa para garantizar la seguridad del receptor.</p>
-
-    <h3>Requisitos generales</h3>
-    <ul>
-      <li>18–50 años.</li>
-      <li>Buena salud general.</li>
-      <li>No haber tomado antibióticos recientemente.</li>
-      <li>No padecer enfermedades gastrointestinales crónicas.</li>
-    </ul>
-
-    <div class="contacto">
-      Contacto para donantes:<br>
-      <!-- PENDIENTE: sustituir "#" por el mailto o la URL del formulario definitivo -->
-      <a href="#">Formulario: Quiero ser donante</a>
-    </div>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Donación de heces</p>
-
-          <p class="ig-banda">¿Quién puede donar?</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-calendario"/></svg>Entre 18 y 50 años</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-corazon"/></svg>Buena salud general</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-escudo"/></svg>Sin antibióticos recientes ni enfermedad digestiva crónica</li>
-          </ul>
-
-          <p class="ig-banda v2">Evaluación del donante</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-documento"/></svg>Cuestionario y entrevista</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-tuboensayo"/></svg>Análisis de heces y sangre</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-lupa"/></svg>Exclusión de riesgos</li>
-          </ul>
-
-          <p class="ig-banda v3">Proceso de donación</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-matraz"/></svg>Recogida segura</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microscopio"/></svg>Procesamiento en laboratorio</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-caja"/></svg>Conservación en el banco de heces</li>
-          </ul>
-
-          <p class="ig-cierre">Una donación altruista hace posible el TMF</p>
-        </div>
-        <figcaption>Donación de heces para TMF.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/donacion-foto.png" alt="Ilustración de la microbiota intestinal en manos" width="474" height="316" loading="lazy" decoding="async">
-        <figcaption>La donación de heces hace posible el TMF.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Profesionales sanitarios -->
-  <section id="profesionales">
-    <h2><span class="ico" aria-hidden="true">🧑‍⚕️</span> Información para profesionales sanitarios</h2>
-    <p>Esta sección está dirigida a profesionales que atienden pacientes con infección por <em>C. difficile</em> o que desean consultar aspectos relacionados con el TMF.</p>
-
-    <h3>Ofrecemos</h3>
-    <ul>
-      <li>Asesoramiento clínico en diagnóstico y manejo de la infección.</li>
-      <li>Revisión de casos complejos.</li>
-      <li>Información sobre indicaciones, contraindicaciones y logística del TMF.</li>
-      <li>Colaboración en investigación y formación.</li>
-    </ul>
-
-    <div class="contacto">
-      Contacto para profesionales:<br>
-      <!-- PENDIENTE: sustituir "#" por el mailto o la URL del formulario definitivo -->
-      <a href="#">Consulta: Contacto profesional TMF</a>
-    </div>
-
-    <div class="galeria">
-      <figure class="infografia-fig">
-        <div class="ig">
-          <p class="ig-titulo">Información para profesionales sanitarios</p>
-
-          <p class="ig-banda">Asesoramiento y apoyo</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-lupa"/></svg>Diagnóstico y manejo de la infección</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-alerta"/></svg>Revisión de casos complejos</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-documento"/></svg>Indicaciones y contraindicaciones</li>
-          </ul>
-
-          <p class="ig-banda v2">Procesos y logística</p>
-          <ul class="ig-items n3">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-check"/></svg>Selección de donantes</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-capsula"/></svg>Procedimiento del TMF</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-reloj"/></svg>Seguimiento de pacientes</li>
-          </ul>
-
-          <p class="ig-banda v3">Formación e investigación</p>
-          <ul class="ig-items n2">
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-birrete"/></svg>Formación médica</li>
-            <li><svg class="ig-ico" aria-hidden="true"><use href="#i-microscopio"/></svg>Proyectos de investigación</li>
-          </ul>
-
-          <p class="ig-cierre">Colaboración multidisciplinar</p>
-        </div>
-        <figcaption>Información para profesionales sanitarios.</figcaption>
-      </figure>
-      <figure>
-        <img src="images/profesionales-foto.jpeg" alt="Equipo de profesionales sanitarios reunido" width="427" height="427" loading="lazy" decoding="async">
-        <figcaption>Equipo multidisciplinar de profesionales sanitarios.</figcaption>
-      </figure>
-    </div>
-  </section>
+  </div>
 
 </main>
 
@@ -713,7 +143,7 @@
 
     <div class="aviso">
       <strong>Aviso: contenido informativo</strong>
-      Esta página tiene finalidad exclusivamente divulgativa e informativa. No sustituye la consulta,
+      Esta web tiene finalidad exclusivamente divulgativa e informativa. No sustituye la consulta,
       el diagnóstico ni el tratamiento por parte de un profesional sanitario. Si presenta síntomas,
       consulte con su médico o con el servicio de salud correspondiente.
     </div>
