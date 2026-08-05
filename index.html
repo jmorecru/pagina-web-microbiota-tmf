@@ -5,8 +5,35 @@
 <title>Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF) - HGUGM</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Información institucional sobre microbiota, infección por Clostridioides difficile, Trasplante de Microbiota Fecal (TMF), donación de heces y actividad del Hospital General Universitario Gregorio Marañón.">
+
+<!-- Provisional: impide la indexación en buscadores mientras el contenido no esté aprobado.
+     Eliminar esta línea para publicar de forma definitiva. -->
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="canonical" href="https://jmorecru.github.io/pagina-web-microbiota-tmf/">
+<meta name="theme-color" content="#0b4f6c">
+
+<!-- Open Graph: vista previa al compartir el enlace (WhatsApp, redes sociales) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Hospital General Universitario Gregorio Marañón">
+<meta property="og:title" content="Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF)">
+<meta property="og:description" content="Información sobre microbiota intestinal, infección por Clostridioides difficile, Trasplante de Microbiota Fecal, donación de heces y actividad del Hospital General Universitario Gregorio Marañón.">
+<meta property="og:url" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/">
+<meta property="og:image" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/images/microbiota-foto.jpeg">
+<meta property="og:image:width" content="442">
+<meta property="og:image:height" content="248">
+<meta property="og:image:alt" content="Vista microscópica de la microbiota intestinal">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Microbiota, C. difficile y Trasplante de Microbiota Fecal (TMF)">
+<meta name="twitter:description" content="Información institucional del Hospital General Universitario Gregorio Marañón sobre microbiota, C. difficile y TMF.">
+<meta name="twitter:image" content="https://jmorecru.github.io/pagina-web-microbiota-tmf/images/microbiota-foto.jpeg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b4f6c'/%3E%3Cpath d='M11 6c0 6 10 8 10 14a5 5 0 0 1-10 0c0-6 10-8 10-14' fill='none' stroke='%23e0efe9' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+
 <style>
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     margin: 0;
@@ -15,6 +42,30 @@
     color: #12333f;
     background-color: #f5f5f0;
   }
+
+  /* Enlace de salto, visible solo al navegar con teclado */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: #ffffff;
+    color: #0b4f6c;
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    z-index: 100;
+  }
+  .skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+  }
+
+  /* Foco visible y consistente para navegación por teclado */
+  a:focus-visible, .skip-link:focus {
+    outline: 3px solid #145c5c;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
   header {
     background: #0b4f6c;
     color: #ffffff;
@@ -72,6 +123,9 @@
   ul { margin: 0.4rem 0 0.4rem 1.2rem; }
   li { margin-bottom: 0.2rem; }
 
+  /* Emoji decorativo: no aporta información, se oculta a lectores de pantalla */
+  .ico { font-style: normal; }
+
   .galeria {
     display: flex;
     gap: 1.2rem;
@@ -111,16 +165,33 @@
     font-size: 0.85rem;
     margin-top: 2rem;
   }
+  footer a { color: #e0efe9; }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
   footer .codigo {
     margin-top: 0.3rem;
     font-weight: 600;
+  }
+  .aviso {
+    background: rgba(255,255,255,0.1);
+    border-left: 4px solid #e0efe9;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.2rem;
+  }
+  .aviso strong { display: block; margin-bottom: 0.2rem; }
+  .actualizado {
+    margin-top: 0.8rem;
+    opacity: 0.85;
   }
   .logos {
     display: flex;
     gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin: 0 0 1.2rem;
     background: #ffffff;
     padding: 1rem 1.5rem;
     border-radius: 8px;
@@ -128,22 +199,29 @@
   .logos img {
     max-height: 55px;
     width: auto;
+    height: auto;
   }
 
   @media (max-width: 600px) {
     header, main, nav, footer { padding-left: 1rem; padding-right: 1rem; }
     section { padding: 1.2rem; }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
 <header>
   <h1>Microbiota, Clostridioides difficile y Trasplante de Microbiota Fecal (TMF)</h1>
   <p>Hospital General Universitario Gregorio Marañón · Servicio público, actividad clínica e investigación en microbiota y TMF.</p>
 </header>
 
-<nav>
+<nav aria-label="Secciones de la página">
   <a href="#microbiota">Microbiota y salud intestinal</a>
   <a href="#cdiff">Clostridioides difficile</a>
   <a href="#tmf">Trasplante de Microbiota Fecal (TMF)</a>
@@ -152,11 +230,11 @@
   <a href="#profesionales">Información para profesionales</a>
 </nav>
 
-<main>
+<main id="contenido">
 
   <!-- Microbiota -->
   <section id="microbiota">
-    <h2>🧬 Microbiota, Microbioma y Salud Intestinal</h2>
+    <h2><span class="ico" aria-hidden="true">🧬</span> Microbiota, Microbioma y Salud Intestinal</h2>
     <p>La microbiota es el conjunto de microorganismos —bacterias, hongos, virus y otros— que viven en nuestro cuerpo, especialmente en el intestino. El microbioma incluye estos microorganismos, su material genético y las sustancias que producen.</p>
     <p>El ser humano alberga una enorme cantidad de microorganismos que cumplen funciones esenciales: ayudan a digerir alimentos, producen vitaminas, regulan el metabolismo, protegen frente a infecciones y colaboran en el desarrollo del sistema inmunitario.</p>
 
@@ -174,11 +252,11 @@
 
     <div class="galeria">
       <figure>
-        <img src="images/microbiota-foto.jpeg" alt="Vista microscópica de la microbiota intestinal">
+        <img src="images/microbiota-foto.jpeg" alt="Vista microscópica de la microbiota intestinal" width="442" height="248" fetchpriority="high" decoding="async">
         <figcaption>Vista microscópica de la microbiota intestinal.</figcaption>
       </figure>
       <figure>
-        <img src="images/infografia-microbiota.jpeg" alt="Infografía sobre microbiota y salud intestinal">
+        <img src="images/infografia-microbiota.jpeg" alt="Infografía sobre microbiota y salud intestinal" width="379" height="569" loading="lazy" decoding="async">
         <figcaption>Infografía: microbiota, microbioma y salud intestinal.</figcaption>
       </figure>
     </div>
@@ -186,7 +264,7 @@
 
   <!-- C. difficile -->
   <section id="cdiff">
-    <h2>🦠 Infección por <em>Clostridioides difficile</em></h2>
+    <h2><span class="ico" aria-hidden="true">🦠</span> Infección por <em>Clostridioides difficile</em></h2>
     <p><em>C. difficile</em> es una bacteria capaz de producir toxinas que dañan el intestino y causar cuadros que van desde diarrea leve hasta colitis grave. Es una causa frecuente de diarrea asociada a antibióticos y puede afectar tanto a personas hospitalizadas como a personas en la comunidad.</p>
 
     <h3>Transmisión</h3>
@@ -200,11 +278,11 @@
 
     <div class="galeria">
       <figure>
-        <img src="images/infografia-cdifficile.jpeg" alt="Infografía sobre infección por Clostridioides difficile">
+        <img src="images/infografia-cdifficile.jpeg" alt="Infografía sobre infección por Clostridioides difficile" width="410" height="616" loading="lazy" decoding="async">
         <figcaption>Infografía: infección por <em>Clostridioides difficile</em>.</figcaption>
       </figure>
       <figure>
-        <img src="images/cdifficile-foto.png" alt="Cultivo de Clostridioides difficile en placa de laboratorio">
+        <img src="images/cdifficile-foto.png" alt="Cultivo de Clostridioides difficile en placa de laboratorio" width="312" height="234" loading="lazy" decoding="async">
         <figcaption>Cultivo de <em>C. difficile</em> en placa de laboratorio.</figcaption>
       </figure>
     </div>
@@ -212,7 +290,7 @@
 
   <!-- TMF -->
   <section id="tmf">
-    <h2>🧬 Trasplante de Microbiota Fecal (TMF)</h2>
+    <h2><span class="ico" aria-hidden="true">💊</span> Trasplante de Microbiota Fecal (TMF)</h2>
     <p>El TMF consiste en transferir microbiota intestinal procedente de un donante sano al intestino de un paciente, con el objetivo de restaurar el equilibrio perdido. Es el tratamiento más eficaz para la infección recurrente por <em>C. difficile</em>, con tasas de resolución muy elevadas.</p>
 
     <h3>Evidencia y seguridad</h3>
@@ -231,11 +309,11 @@
 
     <div class="galeria">
       <figure>
-        <img src="images/infografia-tmf.jpeg" alt="Infografía sobre Trasplante de Microbiota Fecal">
+        <img src="images/infografia-tmf.jpeg" alt="Infografía sobre Trasplante de Microbiota Fecal" width="411" height="617" loading="lazy" decoding="async">
         <figcaption>Infografía: Trasplante de Microbiota Fecal (TMF).</figcaption>
       </figure>
       <figure>
-        <img src="images/tmf-foto.png" alt="Cápsulas utilizadas para el Trasplante de Microbiota Fecal">
+        <img src="images/tmf-foto.png" alt="Cápsulas utilizadas para el Trasplante de Microbiota Fecal" width="355" height="305" loading="lazy" decoding="async">
         <figcaption>Cápsulas de TMF.</figcaption>
       </figure>
     </div>
@@ -243,7 +321,7 @@
 
   <!-- Actividad HGUGM -->
   <section id="hgugm">
-    <h2>🏥 Actividad del Hospital General Universitario Gregorio Marañón</h2>
+    <h2><span class="ico" aria-hidden="true">🏥</span> Actividad del Hospital General Universitario Gregorio Marañón</h2>
     <p>Nuestro hospital desarrolla un programa clínico dedicado al manejo de la infección por <em>C. difficile</em> y a la aplicación del TMF. Se trata de un servicio <strong>altruista</strong>, integrado en el sistema sanitario público y orientado exclusivamente al beneficio de los pacientes.</p>
 
     <h3>Nuestro trabajo incluye</h3>
@@ -257,11 +335,11 @@
 
     <div class="galeria">
       <figure>
-        <img src="images/infografia-hgugm.png" alt="Infografía sobre actividad del Hospital Gregorio Marañón">
+        <img src="images/infografia-hgugm.jpeg" alt="Infografía sobre actividad del Hospital Gregorio Marañón" width="358" height="536" loading="lazy" decoding="async">
         <figcaption>Infografía: actividad del Hospital General Universitario Gregorio Marañón.</figcaption>
       </figure>
       <figure>
-        <img src="images/hgugm-foto.jpeg" alt="Vista aérea del Hospital General Universitario Gregorio Marañón">
+        <img src="images/hgugm-foto.png" alt="Vista aérea del Hospital General Universitario Gregorio Marañón" width="405" height="234" loading="lazy" decoding="async">
         <figcaption>Hospital General Universitario Gregorio Marañón.</figcaption>
       </figure>
     </div>
@@ -269,7 +347,7 @@
 
   <!-- Donación de heces -->
   <section id="donacion">
-    <h2>💚 Donación de heces</h2>
+    <h2><span class="ico" aria-hidden="true">💚</span> Donación de heces</h2>
     <p>El TMF depende de personas sanas que desean colaborar de forma altruista. La selección del donante es rigurosa para garantizar la seguridad del receptor.</p>
 
     <h3>Requisitos generales</h3>
@@ -282,16 +360,17 @@
 
     <div class="contacto">
       Contacto para donantes:<br>
+      <!-- PENDIENTE: sustituir "#" por el mailto o la URL del formulario definitivo -->
       <a href="#">Formulario: Quiero ser donante</a>
     </div>
 
     <div class="galeria">
       <figure>
-        <img src="images/infografia-donacion.jpeg" alt="Infografía sobre donación de heces">
+        <img src="images/infografia-donacion.jpeg" alt="Infografía sobre donación de heces" width="369" height="554" loading="lazy" decoding="async">
         <figcaption>Infografía: donación de heces para TMF.</figcaption>
       </figure>
       <figure>
-        <img src="images/donacion-foto.png" alt="Ilustración de la microbiota intestinal en manos">
+        <img src="images/donacion-foto.png" alt="Ilustración de la microbiota intestinal en manos" width="474" height="316" loading="lazy" decoding="async">
         <figcaption>La donación de heces hace posible el TMF.</figcaption>
       </figure>
     </div>
@@ -299,7 +378,7 @@
 
   <!-- Profesionales sanitarios -->
   <section id="profesionales">
-    <h2>🧑‍⚕️ Información para profesionales sanitarios</h2>
+    <h2><span class="ico" aria-hidden="true">🧑‍⚕️</span> Información para profesionales sanitarios</h2>
     <p>Esta sección está dirigida a profesionales que atienden pacientes con infección por <em>C. difficile</em> o que desean consultar aspectos relacionados con el TMF.</p>
 
     <h3>Ofrecemos</h3>
@@ -312,33 +391,46 @@
 
     <div class="contacto">
       Contacto para profesionales:<br>
+      <!-- PENDIENTE: sustituir "#" por el mailto o la URL del formulario definitivo -->
       <a href="#">Consulta: Contacto profesional TMF</a>
     </div>
 
     <div class="galeria">
       <figure>
-        <img src="images/infografia-profesionales.jpeg" alt="Infografía sobre información para profesionales sanitarios">
+        <img src="images/infografia-profesionales.jpeg" alt="Infografía sobre información para profesionales sanitarios" width="316" height="473" loading="lazy" decoding="async">
         <figcaption>Infografía: información para profesionales sanitarios.</figcaption>
       </figure>
       <figure>
-        <img src="images/profesionales-foto.jpeg" alt="Equipo de profesionales sanitarios reunido">
+        <img src="images/profesionales-foto.jpeg" alt="Equipo de profesionales sanitarios reunido" width="427" height="427" loading="lazy" decoding="async">
         <figcaption>Equipo multidisciplinar de profesionales sanitarios.</figcaption>
       </figure>
-    </div>
-
-    <div class="logos">
-      <img src="images/logo-hgugm.jpeg" alt="Logo Hospital General Universitario Gregorio Marañón">
-      <img src="images/logo-feder.png" alt="Logo Fondo Europeo de Desarrollo Regional - Unión Europea">
-      <img src="images/logo-ucm.png" alt="Logo Universidad Complutense de Madrid">
-      <img src="images/logo-iisgm.png" alt="Logo IiSGM">
     </div>
   </section>
 
 </main>
 
 <footer>
-  <div>Hospital General Universitario Gregorio Marañón · Madrid</div>
-  <div class="codigo">Código proyecto: PI20/01381</div>
+  <div class="footer-inner">
+
+    <div class="aviso">
+      <strong>Aviso: contenido informativo</strong>
+      Esta página tiene finalidad exclusivamente divulgativa e informativa. No sustituye la consulta,
+      el diagnóstico ni el tratamiento por parte de un profesional sanitario. Si presenta síntomas,
+      consulte con su médico o con el servicio de salud correspondiente.
+    </div>
+
+    <div class="logos">
+      <img src="images/logo-hgugm.jpeg" alt="Logo Hospital General Universitario Gregorio Marañón" width="716" height="88" loading="lazy" decoding="async">
+      <img src="images/logo-feder.png" alt="Logo Fondo Europeo de Desarrollo Regional - Unión Europea" width="248" height="117" loading="lazy" decoding="async">
+      <img src="images/logo-ucm.png" alt="Logo Universidad Complutense de Madrid" width="448" height="412" loading="lazy" decoding="async">
+      <img src="images/logo-iisgm.png" alt="Logo IiSGM" width="260" height="142" loading="lazy" decoding="async">
+    </div>
+
+    <div>Hospital General Universitario Gregorio Marañón · Madrid</div>
+    <div class="codigo">Código proyecto: PI20/01381</div>
+    <div class="actualizado">Última actualización: <time datetime="2026-08-05">5 de agosto de 2026</time></div>
+
+  </div>
 </footer>
 
 </body>
