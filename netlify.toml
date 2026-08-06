@@ -1,0 +1,51 @@
+# ==========================================================================
+# Configuración de Netlify
+#
+# Sitio estático en HTML plano: no hay proceso de compilación, así que no se
+# define ningún comando de build. Netlify solo tiene que publicar la raíz.
+#
+# Al existir este fichero, no hace falta configurar nada en el panel de
+# Netlify: los ajustes de aquí tienen prioridad.
+# ==========================================================================
+
+[build]
+  publish = "."
+
+# --- Cabeceras de seguridad -----------------------------------------------
+# El sitio no carga recursos externos, no tiene JavaScript y no incluye
+# estilos ni scripts en línea, por lo que admite una política muy restrictiva.
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Impide que el navegador adivine el tipo de contenido
+    X-Content-Type-Options = "nosniff"
+    # No permite incrustar el sitio en un iframe ajeno
+    X-Frame-Options = "DENY"
+    # Limita la información de procedencia que se envía a terceros
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Sin JavaScript, sin formularios y sin orígenes externos.
+    # img-src admite data: por el favicon SVG embebido.
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+    # No se usa ninguna de estas capacidades del navegador
+    Permissions-Policy = "geolocation=(), camera=(), microphone=(), payment=()"
+
+    # PROVISIONAL: refuerza el noindex de las siete páginas mientras el
+    # contenido no esté aprobado por el hospital. Al publicar de forma
+    # definitiva hay que eliminar esta línea ADEMÁS de las etiquetas
+    # <meta name="robots"> de los siete ficheros HTML.
+    X-Robots-Tag = "noindex, nofollow"
+
+# --- Caché ----------------------------------------------------------------
+# Las fotografías y logotipos no cambian; la hoja de estilos sí puede cambiar,
+# así que se le da una caché corta para que las correcciones se vean pronto.
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/estilo.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"

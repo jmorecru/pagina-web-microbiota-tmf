@@ -13,10 +13,25 @@ Código de proyecto: **PI20/01381**
 Se publica automáticamente mediante **GitHub Pages** desde la rama `main`: cada `push` actualiza
 el sitio en un minuto aproximadamente.
 
-> **No indexable de forma provisional.** Las siete páginas incluyen
-> `<meta name="robots" content="noindex, nofollow">` para que los buscadores no las rastreen
-> mientras el contenido no esté aprobado por el hospital. Para publicar de forma definitiva, hay
-> que eliminar esa línea **en las siete**.
+### Netlify
+
+El repositorio incluye `netlify.toml`, así que **no hay que configurar nada en el panel**: define
+la raíz como directorio a publicar, cabeceras de seguridad (CSP estricta, sin JavaScript ni
+orígenes externos) y política de caché.
+
+Para conectarlo: en Netlify, *Add new project → Import an existing project → GitHub*, autorizar el
+acceso al repositorio y desplegar. A partir de ahí, cada `push` despliega en ambos sitios a la vez.
+
+### No indexable de forma provisional
+
+Las siete páginas incluyen `<meta name="robots" content="noindex, nofollow">` para que los
+buscadores no las rastreen mientras el contenido no esté aprobado por el hospital.
+
+Para publicar de forma definitiva hay que eliminar **tres cosas**:
+
+1. La etiqueta `<meta name="robots">` de los **siete** ficheros HTML.
+2. La cabecera `X-Robots-Tag` de `netlify.toml`.
+3. Y revisar las URL canónicas (ver el punto 5 de *Pendiente*).
 
 ## Estructura
 
@@ -80,6 +95,11 @@ y visitar <http://localhost:8000>.
 4. **Aprobación institucional.** La web se presenta como institucional del HGUGM y usa sus
    logotipos y los de UCM, IiSGM y FEDER; requiere el visto bueno de esas entidades antes de
    difundirse y antes de retirar el `noindex`.
+5. **Decidir el dominio definitivo.** El sitio se publica en GitHub Pages y en Netlify a la vez, y
+   las etiquetas `canonical`, `og:url` y `og:image` de las siete páginas apuntan a la URL de
+   GitHub Pages. Mientras el `noindex` esté activo no tiene efecto, pero antes de publicar hay que
+   decidir cuál es el dominio oficial y actualizar esas URL absolutas en consecuencia, para no
+   tener dos copias compitiendo en los buscadores.
 
 ## Créditos
 
