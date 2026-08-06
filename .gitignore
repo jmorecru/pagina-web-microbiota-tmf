@@ -18,3 +18,7 @@ $RECYCLE.BIN/
 
 # Empaquetados
 *.zip
+
+# Identificador del sitio de Netlify, propio de cada equipo local.
+# No es una credencial, pero no aporta nada al repositorio.
+.netlify-site-id

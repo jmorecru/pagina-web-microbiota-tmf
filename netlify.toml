@@ -11,6 +11,12 @@
 [build]
   publish = "."
 
+# Netlify, por omisión, redirige /microbiota.html a /microbiota. Se desactiva
+# para que las URL sean idénticas a las de GitHub Pages (el entorno de prueba)
+# y para que las etiquetas canonical apunten a una URL directa, sin redirección.
+[build.processing.html]
+  pretty_urls = false
+
 # --- Cabeceras de seguridad -----------------------------------------------
 # El sitio no carga recursos externos, no tiene JavaScript y no incluye
 # estilos ni scripts en línea, por lo que admite una política muy restrictiva.
