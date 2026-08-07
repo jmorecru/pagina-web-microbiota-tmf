@@ -8,58 +8,46 @@ Código de proyecto: **PI20/01381**
 
 ## Publicación
 
-El sitio tiene dos entornos:
+<https://jmorecru.github.io/pagina-web-microbiota-tmf/>
 
-| Entorno | URL | Se actualiza |
-|---|---|---|
-| **Producción** (Netlify) | <https://microbiota-hgugm.netlify.app/> | Ejecutando `desplegar-netlify.ps1` |
-| Pruebas (GitHub Pages) | <https://jmorecru.github.io/pagina-web-microbiota-tmf/> | Automáticamente en cada `push` |
+Se publica mediante **GitHub Pages** desde la rama `main`: cada `push` actualiza el sitio en un
+minuto aproximadamente. Las etiquetas `canonical`, `og:url` y `og:image` de las siete páginas
+apuntan a esta dirección.
 
-Netlify es el entorno **definitivo**: las etiquetas `canonical`, `og:url` y `og:image` de las
-siete páginas apuntan ahí. Eso significa que la copia de GitHub Pages declara a Netlify como
-versión oficial, de modo que ambas pueden coexistir sin competir en los buscadores.
+### Netlify: preparado, pero sin activar
 
-### Desplegar en Netlify
+El repositorio incluye todo lo necesario para desplegar también en Netlify, pero **no está en
+uso**. Se dejó listo y luego se decidió quedarse en GitHub Pages. Los ficheros implicados no
+tienen ningún efecto sobre GitHub Pages, así que se conservan por si se retoma:
 
-El despliegue **no está conectado a GitHub** a propósito: el repositorio pertenece a una cuenta
-que forma parte de una organización empresarial, y este es un proyecto personal, así que no se
-autoriza ninguna aplicación de terceros sobre esa cuenta. En su lugar se sube el sitio
-directamente a la API de Netlify con `desplegar-netlify.ps1`.
+- **`netlify.toml`** — configuración completa: directorio a publicar, cabeceras de seguridad
+  (CSP estricta, sin JavaScript ni orígenes externos), política de caché y desactivación de la
+  reescritura de URL, para que las direcciones sean idénticas en ambos entornos.
+- **`desplegar-netlify.ps1`** — sube el sitio a la API de Netlify **sin conectar la cuenta de
+  GitHub**, usando únicamente un token personal de Netlify. Se tomó esta vía a propósito: la
+  cuenta de GitHub forma parte de una organización empresarial y este es un proyecto personal,
+  así que no se autoriza ninguna aplicación de terceros sobre ella.
 
-Requiere un token personal de Netlify (*User settings → Applications → Personal access tokens*),
-en una variable de entorno para que no quede escrito en ningún fichero:
-
-```powershell
-$env:NETLIFY_AUTH_TOKEN = "el-token"
-```
+Si algún día se activa:
 
 ```powershell
-# Primera vez: crea el sitio y lo despliega
+$env:NETLIFY_AUTH_TOKEN = "el-token"   # User settings -> Applications -> Personal access tokens
 .\desplegar-netlify.ps1 -CrearSitio -Nombre "microbiota-hgugm"
-
-# Veces siguientes
-.\desplegar-netlify.ps1
-
-# Ver los sitios de la cuenta
-.\desplegar-netlify.ps1 -Listar
 ```
 
-El identificador del sitio se guarda en `.netlify-site-id`, que está excluido del repositorio.
-
-La configuración vive en `netlify.toml`, así que **no hay que tocar nada en el panel de Netlify**:
-define la raíz como directorio a publicar, desactiva la reescritura de URL, y añade cabeceras de
-seguridad (CSP estricta, sin JavaScript ni orígenes externos) y política de caché.
+Y hay que **actualizar las URL absolutas** de las siete páginas (`canonical`, `og:url`,
+`og:image` y `twitter:image`; cuatro por página) al dominio de Netlify, además de decidir cuál de
+los dos entornos es el oficial para no tener dos copias compitiendo en los buscadores. Basta un
+reemplazo de `https://jmorecru.github.io/pagina-web-microbiota-tmf/` por el dominio nuevo.
 
 ### No indexable de forma provisional
 
 Las siete páginas incluyen `<meta name="robots" content="noindex, nofollow">` para que los
 buscadores no las rastreen mientras el contenido no esté aprobado por el hospital.
 
-Para publicar de forma definitiva hay que eliminar **tres cosas**:
-
-1. La etiqueta `<meta name="robots">` de los **siete** ficheros HTML.
-2. La cabecera `X-Robots-Tag` de `netlify.toml`.
-3. Y revisar las URL canónicas (ver el punto 5 de *Pendiente*).
+Para publicar de forma definitiva hay que eliminar la etiqueta `<meta name="robots">` de los
+**siete** ficheros HTML. Si en algún momento se usa Netlify, también la cabecera `X-Robots-Tag`
+de `netlify.toml`.
 
 ## Estructura
 
@@ -123,10 +111,6 @@ y visitar <http://localhost:8000>.
 4. **Aprobación institucional.** La web se presenta como institucional del HGUGM y usa sus
    logotipos y los de UCM, IiSGM y FEDER; requiere el visto bueno de esas entidades antes de
    difundirse y antes de retirar el `noindex`.
-5. **Dominio propio (opcional).** Si en algún momento se apunta un dominio propio al sitio de
-   Netlify, hay que actualizar las URL absolutas de las siete páginas: `canonical`, `og:url` y
-   `og:image`, cuatro por página. Basta un reemplazo de
-   `https://microbiota-hgugm.netlify.app/` por el nuevo dominio.
 
 ## Créditos
 
