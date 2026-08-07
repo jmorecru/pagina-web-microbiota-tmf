@@ -108,11 +108,24 @@ y visitar <http://localhost:8000>.
    «Madrid · Metro O'Donnell»; conviene completarla con la dirección exacta y la forma de acceso.
 3. **Sustituir `images/hgugm-foto.png`.** Parece una captura de Google Earth; su uso público
    exige atribución y tiene restricciones. Conviene una fotografía propia del hospital.
-4. **Aprobación institucional.** La web se presenta como institucional del HGUGM y usa sus
-   logotipos y los de UCM, IiSGM y FEDER; requiere el visto bueno de esas entidades antes de
-   difundirse y antes de retirar el `noindex`.
+4. **Aprobación institucional.** La web se presenta como institucional del HGUGM y usa su
+   logotipo y los del Ministerio de Ciencia, Innovación y Universidades, el Instituto de Salud
+   Carlos III, la Unión Europea, FEDER e IiSGM; requiere el visto bueno de esas entidades antes
+   de difundirse y antes de retirar el `noindex`.
+5. **Doble bandera de la Unión Europea.** La tira institucional ya incluye el emblema de la UE, y
+   el logotipo de FEDER lo lleva también, así que aparecen dos veces en la misma fila. Suele ser
+   un requisito de ambas fuentes de financiación, pero conviene confirmarlo con quien gestiona el
+   proyecto.
 
 ## Créditos
 
-Hospital General Universitario Gregorio Marañón · Universidad Complutense de Madrid · IiSGM ·
-Fondo Europeo de Desarrollo Regional (FEDER).
+Hospital General Universitario Gregorio Marañón · Instituto de Salud Carlos III · Ministerio de
+Ciencia, Innovación y Universidades · Unión Europea · IiSGM · Fondo Europeo de Desarrollo
+Regional (FEDER).
+
+Los logotipos aparecen en la banda blanca bajo la cabecera, repartidos en dos filas: arriba el
+del hospital, como entidad que publica, junto al código de proyecto; abajo los de financiación.
+La tira institucional (`logo-ministerio-isciii.png`, 592×69) se muestra **a tamaño nativo**: su
+texto es muy pequeño y reducirla para encajarla en una sola fila con el resto la dejaría
+ilegible. En pantallas estrechas se reduce proporcionalmente, que es inevitable con una imagen
+de proporción 8,6:1.

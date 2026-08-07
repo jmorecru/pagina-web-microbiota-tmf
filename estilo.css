@@ -94,22 +94,40 @@ header {
   border-bottom: 1px solid var(--borde);
   padding: 0.9rem 2rem;
 }
+/* Dos filas: arriba la entidad que publica, abajo los financiadores.
+   Se separan porque la tira institucional (Gobierno, Ministerio, UE, ISCIII)
+   mide 592x69 y su texto es muy pequeño: reducirla para que quepa en una
+   sola fila con el resto la haria ilegible, asi que se muestra a tamaño
+   nativo y no se comparte fila con el logotipo del hospital. */
 .cabecera-pie-inner {
   max-width: var(--ancho);
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.logos-principal {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem 2rem;
+  gap: 0.6rem 2rem;
   flex-wrap: wrap;
 }
-.logos {
+.logos-principal img { max-height: 50px; max-width: 100%; width: auto; height: auto; }
+
+.logos-financiadores {
   display: flex;
-  gap: 1.5rem;
   align-items: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  padding-top: 0.9rem;
+  border-top: 1px solid #eef3f2;
 }
-.logos img { max-height: 46px; width: auto; height: auto; }
+/* Logotipos compactos: se limitan por altura */
+.logos-financiadores img { max-height: 52px; max-width: 100%; width: auto; height: auto; }
+/* Tira institucional apaisada: a tamaño nativo, solo se reduce si no cabe */
+.logos-financiadores img.logo-tira { max-height: none; }
+
 .codigo-proyecto {
   margin: 0;
   font-size: 0.78rem;
@@ -422,8 +440,10 @@ footer a { color: var(--verde-claro); }
   header, main, nav, footer, .cabecera-pie { padding-left: 1rem; padding-right: 1rem; }
   .bloque, .portada-intro { padding: 1.2rem; }
   h1 { font-size: 1.5rem; }
-  .logos { gap: 1rem; }
-  .logos img { max-height: 38px; }
+  .logos-principal { gap: 0.5rem 1rem; }
+  .logos-principal img { max-height: 40px; }
+  .logos-financiadores { gap: 1rem; padding-top: 0.7rem; }
+  .logos-financiadores img { max-height: 40px; }
   .acciones .boton { flex: 1 1 100%; text-align: center; }
 }
 
